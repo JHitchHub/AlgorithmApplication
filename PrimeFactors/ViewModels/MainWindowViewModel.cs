@@ -203,19 +203,7 @@ namespace PrimeFactors.ViewModels
             try
             {
                 EnableInput();
-                ResetCursor();
-            }
-            catch (Exception ex)
-            {
-                ShowErrorMessage(ex.Message);
-            }
-        }
-
-        private void ResetCursor()
-        {
-            try
-            {
-                Application.Current.Dispatcher.BeginInvoke(DispatcherPriority.Background, new Action(() => Mouse.OverrideCursor = Cursors.Arrow));
+                Mouse.OverrideCursor = Cursors.Arrow;
             }
             catch (Exception ex)
             {

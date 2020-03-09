@@ -47,7 +47,7 @@
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
 
-                    <TextBox Name="InputTextBox" Grid.Row="0" Margin="5" TextWrapping="Wrap" Validation.ErrorTemplate="{x:Null}" VerticalScrollBarVisibility="Auto" Text="{Binding Path=_MainWindowModel.Input, UpdateSourceTrigger=PropertyChanged}" IsEnabled="{Binding Path=_MainWindowModel.InputEnabled}" KeyUp="InputTextBox_KeyUp" TabIndex="1">
+                    <TextBox Name="InputTextBox" Grid.Row="0" Margin="5" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" Text="{Binding Path=_MainWindowModel.Input, UpdateSourceTrigger=PropertyChanged}" IsEnabled="{Binding Path=_MainWindowModel.InputEnabled}" KeyUp="InputTextBox_KeyUp" TabIndex="1">
                         <!--ToolTip text StringFormat doesn't work properly when used inline so I needed to drop it down so I could use the ContentStringFormat option-->
                         <TextBox.ToolTip>
                             <ToolTip Content="{Binding _MainWindowModel.SelectedAlgorithm.HelpText, FallbackValue='Please select an Algorithm'}" ContentStringFormat="{}{0} Then hit Enter/Return or click Calculate."/>

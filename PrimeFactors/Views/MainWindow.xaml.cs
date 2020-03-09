@@ -41,6 +41,11 @@ namespace PrimeFactors.Views
             }
         }
 
+        /// <summary>
+        /// It makes for a good user experience to check the input if the user changes the selected algorithm
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void _MainWindowModel_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
             if(e.PropertyName.Equals("SelectedAlgorithm"))

@@ -18,6 +18,12 @@ namespace PrimeFactors.Resources
         public const string Message_CouldNotValidate = "Could not validate input.";
         public const string Status_Ready = "Ready";
 
+        /// <summary>
+        /// ValidateInput runs through the list of Validation Rules associated with the selected algorithm
+        /// </summary>
+        /// <param name="inputToValidate"></param>
+        /// <param name="rules"></param>
+        /// <returns></returns>
         public static ValidationResult ValidateInput(string inputToValidate, List<ValidationRule> rules = null)
         {
             foreach (ValidationRule rule in rules)
